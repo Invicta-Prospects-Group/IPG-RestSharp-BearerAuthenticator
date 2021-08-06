@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>PaulSorauer</Authors>
+    <Company>Invicta Prospects Group Pty Ltd</Company>
+    <Description>Simple class that inherits RestSharp's IAuthenticator and implements Bearer Authentication in a RestRequest / RestClient.</Description>
+    <PackageProjectUrl>https://github.com/Invicta-Prospects-Group/IPG-RestSharp-BearerAuthenticator</PackageProjectUrl>
+    <PackageTags>rest;restsharp;bearer authentication;authentication;rest client</PackageTags>
+    <Product>$(AssemblyName)</Product>
+    <PackageId>$(AssemblyName)</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RestSharp" Version="106.10.1" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Invicta-Prospects-Group/IPG-RestSharp-BearerAuthenticator</RepositoryUrl>
+  </PropertyGroup>
+  
+</Project>
