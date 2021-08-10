@@ -24,8 +24,11 @@ client.Authenticator = new BearerAuthenticator("<my-secret-token>");
 
 You can also pass in an instantiated version of the class wherever there are higher level absractions that accept an IAuthenticator parameter (such as in 3rd party libraries).
 
+### Dynamic evaluation of token
+In some situations it might be helpful to 'evaluate' the token value only at the point it's needed by the rest client (i.e. the Authenticate method). This could occur in a scenario where you're using dependency injection and the whole service provider graph is configured on program instantiation but when the access token is not know until further processing has occured. This is supported by the use of overloaded constructor accepting a `Func <string>` parameter.
+
 ## Installation
-Use the Nuget Package Manager to install the library. Nuget package name is "IPG.RestSharp.BearerAuthenticator". You can also instal via runnig the following in the Package Manager Console:
+Use the Nuget Package Manager to install the library. Nuget package name is "IPG.RestSharp.BearerAuthenticator". You can also instal via running the following in the Package Manager Console:
 ```powershell
 Install-Package IPG.RestSharp.BearerAuthenticator
 ```
