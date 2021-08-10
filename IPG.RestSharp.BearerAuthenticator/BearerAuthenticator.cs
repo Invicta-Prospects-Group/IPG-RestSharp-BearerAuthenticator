@@ -32,9 +32,9 @@ namespace IPG.RestSharp.BearerAuthenticator
             var realAccessToken = accessToken ?? accessTokenEvaluator.Invoke();
 
             if (realAccessToken == null)
-                throw new ArgumentNullException(nameof(accessToken));
+                throw new ArgumentNullException(nameof(realAccessToken));
 
-            request.AddOrUpdateParameter("Authorization", "Bearer " + accessToken, ParameterType.HttpHeader);
+            request.AddOrUpdateParameter("Authorization", "Bearer " + realAccessToken, ParameterType.HttpHeader);
         }
     }
 }
